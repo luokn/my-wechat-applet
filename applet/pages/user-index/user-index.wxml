@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="20"></icon>
+                <input type="text" class="weui-search-bar__input" model:value="{{search}}" placeholder="请输入搜索内容" />
+            </view>
+        </view>
+        <view class="weui-search-bar__cancel-btn" bindtap='onSearchTap'>搜索</view>
+    </view>
+
+    <view class="item" hover-class="item-hover" bindtap="onUserTap"  wx:for="{{users}}" wx:key="id" wx:for-item="user" data-user="{{user}}">
+        <image style="height: 70rpx; width: 70rpx; border-radius: 35rpx; background-color: white;" src="{{user.avatar}}" />
+        <text class="name">{{user.username}}</text>
+        <text class="degree" wx:if="{{user.degree}}">{{user.degree}}</text>
+    </view>
+</view>

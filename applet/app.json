@@ -1,0 +1,56 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/competition-index/competition-index",
+        "pages/competition-main/competition-main",
+        "pages/competition-create/competition-create",
+        "pages/forum/forum",
+        "pages/me/me",
+        "pages/my-teams/my-teams",
+        "pages/team-index/team-index",
+        "pages/team-main/team-main",
+        "pages/user-index/user-index",
+        "pages/user-main/user-main",
+        "pages/excellent-index/excellent-index",
+        "pages/excellent-create/excellent-create",
+        "pages/team-create/team-create",
+        "pages/resume-edit/resume-edit",
+        "pages/my-collections/my-collections"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f8f8f8",
+        "navigationBarTitleText": "竞赛管理服务平台",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "color": "#080808",
+        "selectedColor": "#ff9c11",
+        "backgroundColor": "#f8f8f8",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/competition-index/competition-index",
+                "text": "比赛",
+                "iconPath": "assets/比赛.png",
+                "selectedIconPath": "assets/比赛.png"
+            },
+            {
+                "pagePath": "pages/my-teams/my-teams",
+                "text": "组队",
+                "iconPath": "assets/组队.png",
+                "selectedIconPath": "assets/组队.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的",
+                "iconPath": "assets/我的.png",
+                "selectedIconPath": "assets/我的.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,86 @@
+page,
+.container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40rpx;
+    height: 120rpx;
+}
+
+.logo image {
+    height: 120rpx;
+    width: 120rpx;
+    border-radius: 50rpx;
+    background-color: white;
+}
+
+.logo view {
+    margin-top: 20rpx;
+    padding: 15rpx 25rpx;
+    border-radius: 12rpx;
+    line-height: 30rpx;
+    color: #808080;
+    background-color: #e2e2e2;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 10rpx;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 0rpx 10rpx;
+}
+
+.form text {
+    line-height: 80rpx;
+
+    color: #808080;
+}
+
+.form-item input {
+    flex-grow: 1;
+
+    border-bottom: 1rpx solid #808080;
+    color: #2c3253;
+}
+
+.form-item textarea {
+    flex-grow: 1;
+
+    border-bottom: 1rpx solid #808080;
+    color: #2c3253;
+}
+
+.form-item picker {
+    color: #2c3253;
+}
+
+.form-item label {
+    color: #2c3253;
+}
+
+.submit {
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0rpx 20rpx 20rpx 20rpx;
+    border-radius: 40rpx;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+<view class="container">
+    <block wx:if="{{code != null}}">
+        <view class="top">
+            <image style="width: 200rpx; height: 200rpx; border-radius: 100rpx; background-color: #ffffff;" src="{{avatar}}" />
+            <text class="username" wx:if="{{fromWechat}}">{{username}}</text>
+            <input class="username" placeholder="请设置用户名" model:value="{{username}}" wx:else />
+        </view>
+        <view class="bottom">
+            <text class="submit" style="color: #ffffff; background-color: #5df180;" bindtap="onGetProfileTap" wx:if="{{!fromWechat}}">使用微信头像与昵称</text>
+            <text class="submit" style="color: #ffffff; background-color: #35c0ef;" bindtap="onLoginTap">登录</text>
+        </view>
+    </block>
+</view>

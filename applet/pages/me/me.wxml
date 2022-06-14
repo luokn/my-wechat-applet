@@ -1,0 +1,42 @@
+<view class="container" wx:if="{{me != null}}">
+    <view class="user">
+        <image style="height: 160rpx; width: 160rpx; border-radius: 80rpx; background-color: white;" src="{{me.avatar}}" />
+        <text style="font-size: 28rpx; color: #808080;">
+            {{me.is_admin ? "管理员 " : ""}}{{me.username}}
+        </text>
+    </view>
+    <view class="mid" bindtap="onResumeTap">
+        <text style="line-height: 2; font-size: 30rpx; color: #808080;">性别：{{me.gender}} </text>
+        <text style="line-height: 2; font-size: 30rpx; color: #808080;">学位：{{me.degree}} </text>
+        <text style="line-height: 2; font-size: 30rpx; color: #808080;">专业：{{me.major}} </text>
+        <text style="line-height: 2; font-size: 30rpx; color: #808080;">电话：{{me.phone_number}} </text>
+        <text style="line-height: 2; font-size: 30rpx; color: #808080;">微信：{{me.wechat_number}} </text>
+        <text style="line-height: 2; font-size: 30rpx; color: #808080;">简介：{{me.introduce}} </text>
+    </view>
+    <view class="panel">
+        <text class="head">功能</text>
+        <view class="items">
+            <view class="item" bindtap="onCollectionsTap">
+                <image style="height: 60rpx; width: 60rpx;" src="https://www.bojji.cc/static/collected.png" />
+                <text style="font-size: 28rpx; color: #808080;">我的收藏</text>
+            </view>
+            <view class="item" bindtap="onCompetitionCreateTap">
+                <image style="height: 60rpx; width: 60rpx;" src="https://www.bojji.cc/static/competition.png" />
+                <text style="font-size: 28rpx; color: #808080;">发布竞赛</text>
+            </view>
+            <view class="item" bindtap="onTeamsTap">
+                <image style="height: 60rpx; width: 60rpx;" src="https://www.bojji.cc/static/team.png" />
+                <text style="font-size: 28rpx; color: #808080;">管理队伍</text>
+            </view>
+            <view class="item" bindtap="onUsersTap">
+                <image style="height: 60rpx; width: 60rpx;" src="https://www.bojji.cc/static/edit.png" />
+                <text style="font-size: 28rpx; color: #808080;">管理用户</text>
+            </view>
+
+            <!-- <view class="item" bindtap="onExcellentTap">
+                <image style="height: 60rpx; width: 60rpx;" src="https://www.bojji.cc/static/logo.png" />
+                <text style="font-size: 28rpx; color: #808080;">发布优秀队伍</text>
+            </view> -->
+        </view>
+    </view>
+</view>

@@ -1,0 +1,48 @@
+<view>
+    <block wx:if="{{loaded}}">
+        <view class="container">
+            <view class="top">
+                <image style="width: 120rpx; height: 120rpx; border-radius: 60rpx;background-color: white;" src="{{team.captain.avatar}}" />
+                <view class="info">
+                    <text>{{team.name}} </text>
+                    <text style="font-size: 24rpx; color: #808080;">{{competition.title}}</text>
+                </view>
+            </view>
+
+            <view class="mid">
+                <text style="color: #999999; line-height: 2;">队伍介绍：{{team.introduce}}</text>
+                <text style="color: #999999; line-height: 2;">入队要求：{{team.requirements}}</text>
+                <text style="color: #999999; line-height: 2;">截止日期：{{team.deadline}}</text>
+            </view>
+
+
+            <view class="list">
+                <view class="head"> 队员 </view>
+                <view class="item" hover-class="item-hover" bindtap="onMemberTap" data-member="{{team.captain}}">
+                    <image style="height: 70rpx;width: 70rpx;border-radius: 35rpx;" src="{{team.captain.avatar}}" />
+                    <text class="name">{{team.captain.username}}</text>
+                    <text class="tag" style="font-size: 24rpx; color: #bbbbbb;"> 队长 </text>
+                </view>
+                <view class="item" hover-class="item-hover" bindtap="onMemberTap" bindlongtap="onMemberLongTap" wx:for="{{members}}" wx:key="id" wx:for-item="member" data-member="{{member}}">
+                    <image style="height: 70rpx;width: 70rpx;border-radius: 35rpx;" src="{{member.avatar}}" />
+                    <text class="name">{{member.username}}</text>
+                </view>
+                <view class="item" hover-class="item-hover" bindtap="onApplyTap" wx:if="{{canApply}}">
+                    <image style="height: 70rpx;width: 70rpx;border-radius: 35rpx;" src="https://www.bojji.cc/static/join.png" />
+                    <text class="name" style="color: #808080;"> 申请加入 </text>
+                </view>
+            </view>
+            <view class="list" wx:if="{{applicants.length}}">
+                <view class="head"> 申请人 </view>
+                <view class="item" hover-class="item-hover" bindtap="onApplicantTap" bindlongpress="onApplicantLongTap" wx:for="{{applicants}}" wx:key="id" wx:for-item="applicant" data-applicant="{{applicant}}">
+                    <image style="height: 70rpx;width: 70rpx;border-radius: 35rpx;" src="{{applicant.avatar}}" />
+                    <text class="name">{{applicant.username}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="bottom" wx:if="{{canEdit}}">
+            <image style="width: 70rpx;height: 70rpx; border-radius: 35rpx; background-color: white;" bindtap="onDeleteTap" src="https://www.bojji.cc/static/delete.png" />
+            <image style="width: 70rpx;height: 70rpx; border-radius: 35rpx; background-color: white;" bindtap="onEditTap" src="https://www.bojji.cc/static/tag.png" />
+        </view>
+    </block>
+</view>

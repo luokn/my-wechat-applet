@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="20"></icon>
+                <input type="text" class="weui-search-bar__input" model:value="{{search}}" placeholder="请输入搜索内容" />
+            </view>
+        </view>
+        <view class="weui-search-bar__cancel-btn" bindtap='onSearchTap'>搜索</view>
+    </view>
+
+    <view class="item" hover-class="list-item-hover" bindtap="onTeamTap" wx:for="{{teams}}" wx:key="id" wx:for-item="team" data-team="{{team}}">
+        <image style="height: 70rpx; width: 70rpx; border-radius: 35rpx; background-color: white;" src="{{team.captain.avatar}}" />
+        <text class="name">{{team.name}}</text>
+        <text style="font-size: 24rpx; color: #aaaaaa;"> 队长：{{team.captain.username}}
+        </text>
+    </view>
+</view>

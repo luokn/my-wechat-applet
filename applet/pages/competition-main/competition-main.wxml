@@ -1,0 +1,64 @@
+<view>
+    <view class="container" wx:if="{{competition}}">
+        <view class="top">
+            <image style="height: 120rpx; width: 120rpx; border-radius: 30rpx; background-color: white;" src="{{competition.logo_url}}" />
+            <text>{{competition.title}}</text>
+        </view>
+
+        <view class="mid">
+            <text style="line-height: 2; color: #808080;">报名网址或邮箱：{{competition.home_page}}</text>
+            <text style="line-height: 2; color: #808080;">类别：{{competition.category}}</text>
+            <text style="line-height: 2; color: #808080;">级别：{{competition.level}}</text>
+            <text style="line-height: 2; color: #808080;">截止日期：{{competition.deadline}}</text>
+            <text style="line-height: 2; color: #808080;">人数限制：{{competition.members_max}}</text>
+            <text style="line-height: 2; color: #808080;">主办单位：{{competition.organizer}}</text>
+            <text style="line-height: 2; color: #808080;">是否加学分：{{competition.extra_credits ? "是": "否"}}</text>
+            <text style="line-height: 2; color: #808080;">注意事项：{{competition.notice}}</text>
+            <text style="line-height: 2; color: #808080;">详细描述：{{competition.description}}</text>
+        </view>
+
+        <view class="teams">
+            <view class="head">正在招募的队伍</view>
+            <view class="item" hover-class="list-item-hover" bindtap="onTeamTap" wx:for="{{teams}}" wx:key="id" wx:for-item="team" data-team="{{team}}">
+                <image style="height: 70rpx; width: 70rpx; border-radius: 35rpx;" src="{{team.captain.avatar}}" />
+                <text class="name">{{team.name}}</text>
+                <text style="font-size: 24rpx; color: #bbbbbb;" wx:if="{{team.is_excellent}}"> 优秀团队 </text>
+            </view>
+            <view class="item" hover-class="list-item-hover" bindtap="onJoinTap">
+                <image style="height: 70rpx; width: 70rpx; border-radius: 35rpx;" src="https://www.bojji.cc/static/join.png" />
+                <text class="name" style="line-height: 2;   color: #808080;"> 创建队伍 </text>
+            </view>
+        </view>
+
+        <view class="comments" wx:if="{{comments}}">
+            <view class="head">比赛论坛</view>
+            <view class="item" wx:for="{{comments}}" wx:key="id" wx:for-item="comment">
+                <view class="comment" bindtap="onCommentTap" bindlongpress="onCommentPress" data-comment="{{comment}}">
+                    <image style="width: 70rpx; height: 70rpx; border-radius: 35rpx; background-color: white;" src="{{comment.user.avatar}}" />
+                    <view class="content">
+                        <text style="line-height: 70rpx;">{{comment.user.username}}</text>
+                        <text style="font-size: 28rpx; color: #808080; line-height: 1.5;">{{comment.msg}}</text>
+                        <text style="font-size: 24rpx; color: #bbbbbb; text-align: right;">{{comment.time}}</text>
+                    </view>
+                </view>
+                <view class="reply" wx:for="{{comment.replies}}" wx:key="id" wx:for-item="reply">
+                    <image style="width: 60rpx; height: 60rpx; border-radius: 30rpx; background-color: white;" src="{{reply.user.avatar}}" />
+                    <view class="content">
+                        <text style="line-height: 60rpx;">{{reply.user.username}}</text>
+                        <text style="font-size: 28rpx; color: #808080; line-height: 1.5;">{{reply.msg}}</text>
+                        <text style="font-size: 24rpx; color: #bbbbbb; text-align: right;">{{reply.time}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="create">
+
+        </view>
+    </view>
+    <view class="bottom">
+        <image style="height: 70rpx; width: 70rpx; border-radius: 35rpx; background-color: white;" src="https://www.bojji.cc/static/{{collected ? 'collected' : 'collect'}}.png" bindtap="onCollectTap" />
+        <image style="height: 70rpx; width: 70rpx; border-radius: 35rpx; background-color: white;" src="https://www.bojji.cc/static/comment.png" bindtap="onCommentTap" />
+        <image style="width: 70rpx;height: 70rpx; border-radius: 35rpx; background-color: white;" bindtap="onDeleteTap" wx:if="{{canDelete}}" src="https://www.bojji.cc/static/delete.png" />
+        <image style="width: 70rpx;height: 70rpx; border-radius: 35rpx; background-color: white;" bindtap="onEditTap" wx:if="{{canDelete}}" src="https://www.bojji.cc/static/edit.png" />
+    </view>
+</view>

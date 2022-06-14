@@ -1,0 +1,22 @@
+<!--pages/team-create/team-create.wxml-->
+<view class="container">
+    <view class="form-item">
+        <view>队伍名称：</view>
+        <input placeholder="队伍名称" model:value="{{name}}" />
+    </view>
+    <view class="form-item">
+        <view>截止日期：</view>
+        <picker mode="date" model:value="{{deadline}}">{{deadline}}</picker>
+    </view>
+    <view class="form-item">
+        <view>队伍简介：</view>
+        <input placeholder="队伍介绍、所获荣誉等" model:value="{{introduce}}" />
+    </view>
+    <view class="form-item">
+        <view>招募需求：</view>
+        <input placeholder="外语水平、专业技能等" model:value="{{requirements}}" />
+    </view>
+    <view class="shim">
+    </view>
+    <text class="submit" style="color: #ffffff; background-color: #5df17f;" bindtap="onSubmitTap">提交</text>
+</view>

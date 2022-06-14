@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx 20rpx 120rpx 20rpx;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+    margin-bottom: 10rpx;
+    border-radius: 15rpx;
+    background-color: white;
+}
+
+.comment,
+.reply {
+    display: flex;
+    flex-direction: row;
+}
+
+.reply {
+    margin-left: 95rpx;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 50%;
+    margin-left: 25rpx;
+}
+
+.create {
+    position: fixed;
+    bottom: 20rpx;
+    width: 100%;
+    text-align: center;
+
+    animation-duration: 0.5s;
+    animation-name: floatup;
+}
+
+@keyframes floatup {
+    from {
+        bottom: -80rpx;
+    }
+
+    to {
+        bottom: 20rpx;
+    }
+}

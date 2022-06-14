@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="item" hover-class="item-hover" bindtap="onItemTap" wx:for="{{competitions}}" wx:key="id" wx:for-item="competition" data-competition="{{competition}}">
+        <image style="width: 70rpx; height: 70rpx; border-radius: 15rpx;" src="{{competition.logo_url}}" />
+        <view class="info">
+            <text>{{competition.title}}</text>
+            <text style="font-size: 24rpx; color: #808080;">{{competition.description}}</text>
+        </view>
+        <text class="tag" style="font-size: 24rpx; color: #55bb55;" wx:if="{{competition.state == '正在报名'}}">正在报名</text>
+        <text class="tag" style="font-size: 24rpx; color: #bbbb55;" wx:if="{{competition.state == '即将截止'}}">即将截止</text>
+        <text class="tag" style="font-size: 24rpx; color: #ee6666;" wx:if="{{competition.state == '报名截止'}}">报名截止</text>
+    </view>
+    <view style="height: 100rpx;" />
+</view>

@@ -1,0 +1,10 @@
+/**app.wxss**/
+
+page {
+    background-color: #f8f8f8;
+}
+
+view {
+    margin: 0rpx;
+    padding: 0rpx;
+}

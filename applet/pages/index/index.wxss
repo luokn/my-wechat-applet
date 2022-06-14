@@ -1,0 +1,39 @@
+page,
+.container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+    margin-top: 50%;
+}
+
+.username {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #808080;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0rpx 20rpx 20rpx 20rpx;
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    text-align: center;
+}

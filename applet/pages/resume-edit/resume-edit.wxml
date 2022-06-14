@@ -1,0 +1,39 @@
+<view class="container">
+    <view class="form">
+        <view class="form-item">
+            <text>学历：</text>
+            <input model:value="{{degree}}" />
+        </view>
+
+        <view class="form-item">
+            <text>专业：</text>
+            <input model:value="{{major}}" />
+        </view>
+
+        <view class="form-item">
+            <text>昵称：</text>
+            <input model:value="{{username}}" />
+        </view>
+
+        <view class="form-item">
+            <text>性别：</text>
+            <input model:value="{{gender}}" />
+        </view>
+
+        <view class="form-item">
+            <text>电话：</text>
+            <input model:value="{{phone_number}}" />
+        </view>
+
+        <view class="form-item">
+            <text>微信：</text>
+            <input model:value="{{wechat_number}}" />
+        </view>
+
+        <view class="form-item">
+            <text>简介：</text>
+            <textarea model:value="{{introduce}}" auto-height auto-focus />
+        </view>
+    </view>
+    <text class="submit" style="color: #ffffff; background-color: #5df17f;" bindtap="onSubmitTap">提交</text>
+</view>

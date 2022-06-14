@@ -1,0 +1,38 @@
+<view class="container">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="20"></icon>
+                <input type="text" class="weui-search-bar__input" model:value="{{search}}" placeholder="请输入搜索内容" />
+            </view>
+        </view>
+        <view class="weui-search-bar__cancel-btn" bindtap='onSearchTap'>搜索</view>
+    </view>
+
+    <view style="margin-left: 10rpx;">
+        <text style="color: #3f3f3f; font-size: 30rpx; line-height: 2;">类别：</text>
+        <text style="color: #808080; font-size: 28rpx; line-height: 2;" bindtap="onCategoryTap" data-category="兴趣爱好类">兴趣爱好类 · </text>
+        <text style="color: #808080; font-size: 28rpx; line-height: 2;" bindtap="onCategoryTap" data-category="学科学术类">学科学术类 · </text>
+        <text style="color: #808080; font-size: 28rpx; line-height: 2;" bindtap="onCategoryTap" data-category="设计类">设计类</text>
+    </view>
+
+    <view style="margin-left: 10rpx; margin-bottom: 20rpx;">
+        <text style="color: #3f3f3f; font-size: 30rpx; line-height: 2;">阶段：</text>
+        <text style="color: #808080; font-size: 28rpx; line-height: 2;" bindtap="onStateTap" data-state="正在报名">正在报名 · </text>
+        <text style="color: #808080; font-size: 28rpx; line-height: 2;" bindtap="onStateTap" data-state="即将截止">即将截止 · </text>
+        <text style="color: #808080; font-size: 28rpx; line-height: 2;" bindtap="onStateTap" data-state="报名截止">报名截止 </text>
+    </view>
+
+    <!-- 列表 -->
+    <view class="item" hover-class="item-hover" bindtap="onItemTap" wx:for="{{competitions}}" wx:key="id" wx:for-item="competition" data-competition="{{competition}}">
+        <image style="width: 70rpx; height: 70rpx; border-radius: 15rpx;" src="{{competition.logo_url}}" />
+        <view class="info">
+            <text>{{competition.title}}</text>
+            <text style="font-size: 24rpx; color: #808080;">{{competition.description}}</text>
+        </view>
+        <text class="tag" style="font-size: 24rpx; color: #55bb55;" wx:if="{{competition.state == '正在报名'}}">正在报名</text>
+        <text class="tag" style="font-size: 24rpx; color: #bbbb55;" wx:if="{{competition.state == '即将截止'}}">即将截止</text>
+        <text class="tag" style="font-size: 24rpx; color: #ee6666;" wx:if="{{competition.state == '报名截止'}}">报名截止</text>
+    </view>
+    <view style="height: 100rpx;" />
+</view>

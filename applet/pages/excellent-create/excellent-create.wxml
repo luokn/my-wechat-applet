@@ -1,0 +1,22 @@
+<!--pages/team-create/team-create.wxml-->
+<view class="container">
+    <view class="form-item">
+        <view>队伍名称：</view>
+        <input model:value="{{name}}" />
+    </view>
+    <view class="form-item">
+        <view>队长：</view>
+        <input model:value="{{captain}}" />
+    </view>
+    <view class="form-item">
+        <view>队员：</view>
+        <input model:value="{{members}}" />
+    </view>
+    <view class="form-item">
+        <view>介绍：</view>
+        <input model:value="{{introduce}}" />
+    </view>
+    <view class="shim">
+    </view>
+    <text class="submit" style="color: #ffffff; background-color: #5df17f;" bindtap="onSubmitTap">提交</text>
+</view>

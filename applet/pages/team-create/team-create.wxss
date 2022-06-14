@@ -1,0 +1,60 @@
+/* pages/team-create/team-create.wxss */
+
+page {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+
+    line-height: 100rpx;
+
+    align-items: center;
+
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.form-item view {
+    line-height: 100rpx;
+    color: #808080;
+}
+
+.form-item input {
+    flex-grow: 1;
+
+    margin: 8rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+
+    border-bottom: 1rpx solid #555555;
+
+    color: #38365f;
+}
+
+.form-item picker {
+    flex-grow: 1;
+    margin-left: 8rpx;
+
+    color: #38365f;
+}
+
+.shim {
+    flex-grow: 1;
+}
+
+.submit {
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0rpx 20rpx 20rpx 20rpx;
+    border-radius: 40rpx;
+    text-align: center;
+}

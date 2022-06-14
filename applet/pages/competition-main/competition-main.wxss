@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 20rpx 20rpx 120rpx 20rpx;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top text {
+    margin-left: 25rpx;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20rpx;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+    background-color: white;
+}
+
+.description {
+    padding: 20rpx;
+    margin-top: 10rpx;
+    border-radius: 20rpx;
+    background-color: white;
+}
+
+.teams {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10rpx;
+    border-radius: 20rpx;
+    background-color: white;
+}
+
+.teams .head {
+    padding: 25rpx 20rpx 25rpx 20rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+}
+
+.teams .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20rpx;
+}
+
+.teams .item-hover {
+    background-color: #f8f8f8;
+}
+
+.teams .name {
+    margin-left: 25rpx;
+    flex-grow: 1;
+    width: 50%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10rpx;
+    border-radius: 20rpx;
+
+    background-color: white;
+}
+
+.comments .head {
+    padding: 25rpx 20rpx 25rpx 20rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+}
+
+.comments .item {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+
+    border-bottom: 1rpx solid #f1f1f1;
+}
+
+.comments .comment {
+    display: flex;
+    flex-direction: row;
+}
+
+.comments .reply {
+    display: flex;
+    flex-direction: row;
+    margin-left: 95rpx;
+}
+
+.comments .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 50%;
+    margin-left: 25rpx;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 20rpx;
+    width: 100%;
+    text-align: center;
+
+    animation-duration: 0.5s;
+    animation-name: floatup;
+}
+
+.bottom image {
+    margin: 0rpx 20rpx 0rpx 20rpx;
+}
+
+@keyframes floatup {
+    from {
+        bottom: -80rpx;
+    }
+
+    to {
+        bottom: 20rpx;
+    }
+}

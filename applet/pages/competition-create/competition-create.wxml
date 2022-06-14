@@ -1,0 +1,63 @@
+<view class="container">
+    <view class="logo" bindtap="onLogoSelect">
+        <image src="{{logo_url}}" wx:if="{{logo_url}}" />
+        <view wx:else> 点击选择图片 </view>
+    </view>
+
+    <view class="form">
+        <view class="form-item">
+            <text>标题：</text>
+            <input placeholder="必填" model:value="{{title}}" />
+        </view>
+
+        <view class="form-item">
+            <text>报名网址或邮箱：</text>
+            <input placeholder="必填" model:value="{{home_page}}" />
+        </view>
+
+        <view class="form-item">
+            <text>类别：</text>
+            <picker model:value="{{category_id}}" range="{{categories}}">{{categories[category_id]}} </picker>
+        </view>
+
+        <view class="form-item">
+            <text>级别：</text>
+            <picker model:value="{{level_id}}" range="{{levels}}">{{levels[level_id]}}</picker>
+        </view>
+
+
+        <view class="form-item">
+            <text>截止日期：</text>
+            <picker mode="date" model:value="{{deadline}}"> {{deadline}} </picker>
+        </view>
+
+
+        <view class="form-item">
+            <text>人数限制：</text>
+            <input placeholder="必填" model:value="{{members_max}}" />
+        </view>
+
+        <view class="form-item">
+            <text>主办单位：</text>
+            <input placeholder="必填" model:value="{{organizer}}" auto-height />
+        </view>
+
+        <view class="form-item">
+            <text>注意事项：</text>
+            <textarea placeholder="必填（支持多行）" model:value="{{notice}}" auto-height auto-focus maxlength="1000" />
+        </view>
+
+        <view class="form-item">
+            <text>竞赛描述：</text>
+            <textarea placeholder="必填（支持多行）" model:value="{{description}}" auto-height auto-focus maxlength="1000" />
+        </view>
+
+        <view class="form-item">
+            <text>其他选项：</text>
+            <label>
+                <switch bindchange="onExtraCreditsChange" checked="{{extra_credits}}" />加学分
+            </label>
+        </view>
+    </view>
+    <text class="submit" style="color: #ffffff; background-color: #5df17f;" bindtap="onSubmitTap">提交</text>
+</view>

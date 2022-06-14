@@ -1,0 +1,10 @@
+<view class="container">
+    <block wx:for="{{excellents}}" wx:key="id" wx:for-item="excellent">
+        <view class="item" hover-class="list-item-hover" bindtap="onExcellentTap" data-excellent="{{excellent}}">
+            <text> 队伍名：{{excellent.name}} </text>
+            <text> 队长：{{excellent.captain}} </text>
+            <text> 队员：{{excellent.members}} </text>
+            <text> 介绍：{{excellent.introduce}} </text>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,10 @@
+jieba
+fastapi
+uvicorn
+sqlalchemy
+pg8000
+requests
+pydantic
+pydantic[dotenv]
+python-jose
+python-multipart
