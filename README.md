@@ -1,1 +1,1 @@
-# My Wechat Applet Server
+# My Wechat Applet
